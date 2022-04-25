@@ -1,4 +1,4 @@
-# Singleton Pattern
+# 单例模式
 
 Singleton creational design pattern restricts the instantiation of a type to a single object.
 
@@ -7,7 +7,7 @@ Singleton is a creational design pattern that lets you ensure that a class has o
 ![image](https://user-images.githubusercontent.com/65383410/165093763-471b6849-e56b-49d1-a610-3acaaabc17ac.png)
 
 
-## Implementation
+## 实现
 
 ```go
 package singleton
@@ -29,7 +29,7 @@ func New() singleton {
 }
 ```
 
-## Usage
+## 使用
 
 ```go
 s := singleton.New()
@@ -42,11 +42,7 @@ fmt.Println("This is ", s2["this"])
 // This is that
 ```
 
-## Rules of Thumb
-
-- Singleton pattern represents a global state and most of the time reduces testability.
-
-## Application scenarios
+## 运用场景
 - Logger instance
 - DB instance
 - 生产唯一序号
