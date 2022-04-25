@@ -43,8 +43,9 @@ fmt.Println("This is ", s2["this"])
 
 - Singleton pattern represents a global state and most of the time reduces testability.
 
-## When and where to use the Singleton Pattern?
+## Application scenarios
+- Logger instance
+- DB instance
 - 生产唯一序号
 - Web计数器
 - 缓存
-- 日志

@@ -4,16 +4,16 @@ import (
 	"sync"
 )
 
-type Singleton map[string]string
+type singleton map[string]string
 
 var (
 	once     sync.Once
-	instance Singleton
+	instance singleton
 )
 
-func New() Singleton {
+func New() singleton {
 	once.Do(func() {
-		instance = make(Singleton)
+		instance = make(singleton)
 	})
 	return instance
 }
