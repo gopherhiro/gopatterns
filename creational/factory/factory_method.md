@@ -50,18 +50,18 @@ func NewInstance(ID int) CourseFactory {
 ## 用法
 
 ```go
-	var f CourseFactory
-	var c Course
+var f CourseFactory
+var c Course
 
-	f = NewInstance(static.Chinese)
-	c = f.New()
-	fmt.Println(c.GetName())
-	// Chinese
+f = NewInstance(static.Chinese)
+c = f.New()
+fmt.Println(c.GetName())
+// Chinese
 
-	f = NewInstance(static.English)
-	c = f.New()
-	fmt.Println(c.GetName())
-	// English
+f = NewInstance(static.English)
+c = f.New()
+fmt.Println(c.GetName())
+// English
 ```
 
 

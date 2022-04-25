@@ -67,15 +67,15 @@ func NewFromCache(ID int64) Course {
 ## 用法
 
 ```go
-	var c Course
+var c Course
 
-	c = New(static.Chinese)
-	fmt.Println(c.GetName())
-    // Chinese
+c = New(static.Chinese)
+fmt.Println(c.GetName())
+// Chinese
 
-	c = NewFromCache(static.English)
-	fmt.Println(c.GetName())
-    // English
+c = NewFromCache(static.English)
+fmt.Println(c.GetName())
+// English
 ```
 
 ## 应用场景
