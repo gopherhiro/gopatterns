@@ -42,3 +42,9 @@ fmt.Println("This is ", s2["this"])
 ## Rules of Thumb
 
 - Singleton pattern represents a global state and most of the time reduces testability.
+
+## When and where to use the Singleton Pattern?
+- 生产唯一序号
+- Web计数器
+- 缓存
+- 日志
