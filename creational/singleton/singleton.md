@@ -4,6 +4,9 @@ Singleton creational design pattern restricts the instantiation of a type to a s
 
 Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
 
+![image](https://user-images.githubusercontent.com/65383410/165093763-471b6849-e56b-49d1-a610-3acaaabc17ac.png)
+
+
 ## Implementation
 
 ```go
