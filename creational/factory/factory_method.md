@@ -1,4 +1,6 @@
 # 工厂方法模式
+![image](https://user-images.githubusercontent.com/65383410/165209967-e71b9e32-7890-4f22-8552-5b6481622aa4.png)
+
 Factory design pattern is a creational design pattern and it is also one of the most commonly used pattern. This pattern provides a way to hide the creation logic of the instances being created.
 The client only interacts with a factory struct and tells the kind of instances that needs to be created. The factory class interacts with the corresponding concrete structs and returns the correct instance back.
 
