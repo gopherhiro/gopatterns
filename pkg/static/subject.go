@@ -1,7 +1,7 @@
 package static
 
 const (
-	Default = iota
+	Subject = iota
 	Chinese
 	English
 )

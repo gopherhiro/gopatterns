@@ -19,16 +19,27 @@ func TestSimpleFactory(t *testing.T) {
 }
 
 func TestFactoryMethod(t *testing.T) {
-	var f CourseFactory
-	var c Course
-
-	f = NewFactory(static.Chinese)
-	c = f.NewCourse()
+	chineseFactory := NewFactory(static.Chinese)
+	c := chineseFactory.NewCourse()
 	fmt.Println(c.GetName())
 	// Chinese
 
-	f = NewFactory(static.English)
-	c = f.NewCourse()
-	fmt.Println(c.GetName())
+	englishFactory := NewFactory(static.English)
+	e := englishFactory.NewCourse()
+	fmt.Println(e.GetName())
 	// English
+}
+
+func TestAbstractFactory(t *testing.T) {
+	nikeFactory, _ := NewSportsFactory(static.Nike)
+	nikeShoe := nikeFactory.MakeShoe()
+	PrintShoeDetails(nikeShoe)
+	nikeShirt := nikeFactory.MakeShirt()
+	PrintShirtDetails(nikeShirt)
+
+	adidasFactory, _ := NewSportsFactory(static.Adidas)
+	adidasShoe := adidasFactory.MakeShoe()
+	PrintShoeDetails(adidasShoe)
+	adidasShirt := adidasFactory.MakeShirt()
+	PrintShirtDetails(adidasShirt)
 }
