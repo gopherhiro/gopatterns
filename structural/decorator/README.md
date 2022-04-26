@@ -73,6 +73,11 @@ func TestDecorator(t *testing.T) {
 	fmt.Println("price of vegetable Pizza with tomato and cheese:", withCheese.price())
 }
 
+Output:
+price of vegetable Pizza: 15
+price of vegetable Pizza with tomato: 22
+price of vegetable Pizza with tomato and cheese: 25
+
 ```
 
 ## 应用场景
