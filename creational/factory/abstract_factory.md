@@ -8,7 +8,11 @@
 
 
 ## 实现
-
+抽象工厂模式结构
+- 抽象工厂
+- 具体工厂
+- 抽象产品
+- 具体产品
 ```go
 type iSportsFactory interface {
 	MakeShoe() iShoe
