@@ -1,4 +1,4 @@
-# 生成器模式
+# 建造者模式
 生成器模式是一种创建型设计模式，使你能够分步骤创建复杂对象。该模式允许你使用相同的创建代码生成不同类型和形式的对象。
 
 生成器模式建议将对象构造代码从产品类中抽取出来， 并将其放在一个名为生成器的独立对象中。
@@ -23,13 +23,48 @@
 ## 实现
 
 ```go
+// 要建造的对象
+type house struct {
+	windowType string
+	doorType   string
+	floor      int
+}
 
+// 建造者
+type iBuilder interface {
+	setWindowType()
+	setDoorType()
+	setNumFloor()
+	getHouse() house
+}
+
+func Builder(builder string) iBuilder {
+	if builder == "normal" {
+		return newNormalBuilder()
+	}
+
+	if builder == "igloo" {
+		return newIglooBuilder()
+	}
+	return nil
+}
 ```
 
 ## 用法
 
 ```go
+normalBuilder := builder.Builder("normal")
+normalDirector := builder.NewDirector(normalBuilder)
+r := normalDirector.BuildHouse()
+fmt.Println(r)
 
+iglooBuilder := builder.Builder("igloo")
+iglooDirector := builder.NewDirector(iglooBuilder)
+r = iglooDirector.BuildHouse()
+fmt.Println(r)
 ```
 
 ## 应用场景
+- 如果你需要创建的各种形式的产品，它们的制造过程相似且仅有细节上的差异，此时可使用生成器模式。
+- 生成器模式让你能分步骤构造产品。你可以延迟执行某些步骤而不会影响最终产品。
+- 生成器在执行制造步骤时，不能对外发布未完成的产品。生成器模式能够在产品完成构建之前使其处于私密状态。这可以避免客户端代码获取到不完整结果对象的情况。
