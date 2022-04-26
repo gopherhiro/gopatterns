@@ -25,3 +25,15 @@ func TestProxy(t *testing.T) {
 	httpCode, body = nginxServer.handleRequest(createUserURL, "GET")
 	fmt.Printf("\nUrl: %s\nHttpCode: %d\nBody: %s\n", appStatusURL, httpCode, body)
 }
+
+func TestProxyExample(t *testing.T) {
+	var sub Subject
+	sub = &Proxy{}
+
+	res := sub.Do()
+	fmt.Println(res)
+
+	if res != "pre:real:after" {
+		t.Fail()
+	}
+}
