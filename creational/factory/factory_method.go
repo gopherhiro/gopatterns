@@ -16,6 +16,10 @@ func (m *ChineseFactory) NewCourse() Course {
 	return newChinese()
 }
 
+func newChineseFactory() CourseFactory {
+	return &ChineseFactory{}
+}
+
 // EnglishFactory
 type EnglishFactory struct {
 }
@@ -25,13 +29,18 @@ func (m *EnglishFactory) NewCourse() Course {
 	return newEnglish()
 }
 
+func newEnglishFactory() CourseFactory {
+	return &EnglishFactory{}
+}
+
+
 // 为工厂类再创建一个简单工厂，也就是工厂的工厂，用来创建工厂类对象。
 func NewFactory(ID int) CourseFactory {
 	if ID == static.Chinese {
-		return &ChineseFactory{}
+		return newChineseFactory()
 	}
 	if ID == static.English {
-		return &EnglishFactory{}
+		return newEnglishFactory()
 	}
 	return nil
 }
