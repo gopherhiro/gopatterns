@@ -2,7 +2,7 @@
 Factory design pattern is a creational design pattern and it is also one of the most commonly used pattern. This pattern provides a way to hide the creation logic of the instances being created.
 The client only interacts with a factory struct and tells the kind of instances that needs to be created. The factory class interacts with the corresponding concrete structs and returns the correct instance back.
 
-工厂方法模式是一种创建型设计模式， 其在父类中提供一个创建对象的方法， 允许子类决定实例化对象的类型。
+简单工厂模式：工厂能够生产所有产品，你只要告诉工厂，你需要什么产品，工厂就会生产并返回你需要的产品。
 
 ## 实现
 
@@ -24,6 +24,10 @@ func (m *Chinese) GetName() string {
 	return "Chinese"
 }
 
+func newChinese() *Chinese {
+	return &Chinese{}
+}
+
 // English
 type English struct {
 }
@@ -36,30 +40,20 @@ func (m *English) GetName() string {
 	return "English"
 }
 
+func newEnglish() *English {
+	return &English{}
+}
+
 // 简单工厂（Simple Factory）- 函数式使用方式
-func New(ID int64) Course {
+func NewCourse(ID int64) Course {
 	if ID == static.Chinese {
-		return &Chinese{}
+		return newChinese()
 	}
 
 	if ID == static.English {
-		return &English{}
+		return newEnglish() 
 	}
 
-	return nil
-}
-
-// 简单工厂（Simple Factory）- 缓存式使用方式
-var CourseMap = map[int64]Course{
-	static.Chinese: &Chinese{},
-	static.English: &English{},
-}
-
-func NewFromCache(ID int64) Course {
-	// ok-idiom 模式
-	if instance, ok := CourseMap[ID]; ok {
-		return instance
-	}
 	return nil
 }
 ```
@@ -69,11 +63,11 @@ func NewFromCache(ID int64) Course {
 ```go
 var c Course
 
-c = New(static.Chinese)
+c = NewCourse(static.Chinese)
 fmt.Println(c.GetName())
 // Chinese
 
-c = NewFromCache(static.English)
+c = NewCourse(static.English)
 fmt.Println(c.GetName())
 // English
 ```

@@ -1,42 +1,40 @@
-# 工厂模式
+# 工厂方法模式
 Factory design pattern is a creational design pattern and it is also one of the most commonly used pattern. This pattern provides a way to hide the creation logic of the instances being created.
 The client only interacts with a factory struct and tells the kind of instances that needs to be created. The factory class interacts with the corresponding concrete structs and returns the correct instance back.
 
-工厂方法模式是一种创建型设计模式， 其在父类中提供一个创建对象的方法， 允许子类决定实例化对象的类型。
+工厂方法模式：你告诉工厂需要的产品，工厂先拉投资，创建一个生产该产品工厂，然后再通过这个工厂生产你所需要的产品。
 
 ## 实现
 
 ```go
-
-// Factory Design Pattern
 type Course interface {
 	GetID() int64
 	GetName() string
 }
 
-// Factory Method Pattern
 type CourseFactory interface {
-	New() Course
+	NewCourse() Course
 }
 
 // ChineseFactory
 type ChineseFactory struct {
 }
 
-func (m *ChineseFactory) New() Course {
-	return &Chinese{}
+func (m *ChineseFactory) NewCourse() Course {
+	// 此处封装复杂的对象创建过程
+	return newChinese()
 }
 
 // EnglishFactory
 type EnglishFactory struct {
 }
 
-func (m *EnglishFactory) New() Course {
-	return &English{}
+func (m *EnglishFactory) NewCourse() Course {
+	// do sth
+	return newEnglish()
 }
-
 // 为工厂类再创建一个简单工厂，也就是工厂的工厂，用来创建工厂类对象。
-func NewInstance(ID int) CourseFactory {
+func NewFactory(ID int) CourseFactory {
 	if ID == static.Chinese {
 		return &ChineseFactory{}
 	}
@@ -53,13 +51,13 @@ func NewInstance(ID int) CourseFactory {
 var f CourseFactory
 var c Course
 
-f = NewInstance(static.Chinese)
-c = f.New()
+f = NewFactory(static.Chinese)
+c = f.NewCourse()
 fmt.Println(c.GetName())
 // Chinese
 
-f = NewInstance(static.English)
-c = f.New()
+f = NewFactory(static.English)
+c = f.NewCourse()
 fmt.Println(c.GetName())
 // English
 ```
