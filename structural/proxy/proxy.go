@@ -1,5 +1,10 @@
 package proxy
 
+// Nginx 这样的 Web 服务器可充当应用程序服务器的代理：
+// - 提供了对应用程序服务器的受控访问权限。
+// - 可限制速度。
+// - 可缓存请求。
+
 // 服务接口：代理必须遵循该接口才能伪装成服务对象。
 type server interface {
 	handleRequest(string, string) (int, string)
