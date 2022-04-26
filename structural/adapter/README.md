@@ -3,6 +3,13 @@
 
 ![image](https://user-images.githubusercontent.com/65383410/165320220-417d50a8-dc92-43d4-878b-6eb333deaf1d.png)
 
+#### 举例
+![image](https://user-images.githubusercontent.com/65383410/165323721-5050814e-e14d-4b9f-9f6b-b4341f47d8ec.png)
+
+你可以创建一个适配器。 这是一个特殊的对象， 能够转换对象接口， 使其能与其他对象进行交互。
+
+![image](https://user-images.githubusercontent.com/65383410/165323740-b4a6236c-2684-410f-8c51-110f8ad567c1.png)
+
 
 ## 实现
 
