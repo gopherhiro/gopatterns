@@ -1,6 +1,10 @@
 # 代理模式
 代理模式是一种结构型设计模式， 让你能够提供对象的替代品或其占位符。 代理控制着对于原对象的访问， 并允许在将请求提交给对象前后进行一些处理。
 
+代理模式建议新建一个与原服务对象接口相同的代理类，代理类接收到客户端请求后会创建实际的服务对象， 并将所有工作委派给它。
+
+![image](https://user-images.githubusercontent.com/65383410/165267686-569d80d5-4b89-49ab-8f2b-5a84e7c7f2f9.png)
+
 
 ## 实现
 
@@ -84,6 +88,27 @@ fmt.Printf("\nUrl: %s\nHttpCode: %d\nBody: %s\n", appStatusURL, httpCode, body)
 
 httpCode, body = nginxServer.handleRequest(createUserURL, "GET")
 fmt.Printf("\nUrl: %s\nHttpCode: %d\nBody: %s\n", appStatusURL, httpCode, body)
+
+Output：
+Url: /app/status
+HttpCode: 200
+Body: Ok
+
+Url: /app/status
+HttpCode: 200
+Body: Ok
+
+Url: /app/status
+HttpCode: 403
+Body: Not Allowed
+
+Url: /app/status
+HttpCode: 201
+Body: User Created
+
+Url: /app/status
+HttpCode: 404
+Body: Not Ok
 ```
 
 ## 应用场景
