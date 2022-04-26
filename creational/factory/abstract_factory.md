@@ -1,5 +1,10 @@
 # 抽象工厂模式
 抽象工厂模式是一种创建型设计模式，它能创建一系列相关的对象。
+![image](https://user-images.githubusercontent.com/65383410/165224256-32648d09-67af-4e57-b6fc-024cbbe5e1ab.png)
+
+#### 系列产品及其不同变体。
+
+![image](https://user-images.githubusercontent.com/65383410/165224227-d032e1eb-65e8-42e2-8955-5c8968eac6a1.png)
 
 
 ## 实现
