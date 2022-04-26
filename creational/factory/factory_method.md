@@ -7,42 +7,6 @@ The client only interacts with a factory struct and tells the kind of instances 
 ## 实现
 
 ```go
-type Course interface {
-	GetID() int64
-	GetName() string
-}
-
-type CourseFactory interface {
-	NewCourse() Course
-}
-
-// ChineseFactory
-type ChineseFactory struct {
-}
-
-func (m *ChineseFactory) NewCourse() Course {
-	// 此处封装复杂的对象创建过程
-	return newChinese()
-}
-
-func newChineseFactory() CourseFactory {
-	return &ChineseFactory{}
-}
-
-// EnglishFactory
-type EnglishFactory struct {
-}
-
-func (m *EnglishFactory) NewCourse() Course {
-	// do sth
-	return newEnglish()
-}
-
-func newEnglishFactory() CourseFactory {
-	return &EnglishFactory{}
-}
-
-
 // 为工厂类再创建一个简单工厂，也就是工厂的工厂，用来创建工厂类对象。
 func NewFactory(ID int) CourseFactory {
 	if ID == static.Chinese {
