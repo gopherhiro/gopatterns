@@ -4,6 +4,9 @@
 #### 真实世界类比 
 穿上多件衣服将获得组合性的效果。
 
+![image](https://user-images.githubusercontent.com/65383410/165287892-eaf53215-3545-4e1d-87d4-4f40518d6826.png)
+
+
 
 ## 实现
 
