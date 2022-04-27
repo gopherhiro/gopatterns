@@ -9,6 +9,8 @@ Template method breaks the algorithm into steps, allowing subclasses to override
 
 So, we have a scenario where the steps of a particular operation are the same, but these steps’ implementation may differ. This is an appropriate situation to consider using the Template Method pattern.
 
+We define a base template algorithm that consists of a fixed number of methods. That’ll be our template method. We will then implement each of the step methods, but leave the template method unchanged.
+
 
 ## 实现
 
