@@ -3,6 +3,14 @@
 
 观察者是一种行为设计模式，允许你定义一种订阅机制，可在对象事件发生时通知多个“观察”该对象的其他对象。
 
+Observer is a behavioral design pattern that lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.
+
+![image](https://user-images.githubusercontent.com/65383410/165441876-9b869dc7-cad3-4abd-bc9a-6329d4456446.png)
+
+Magazine and newspaper subscriptions.
+
+![image](https://user-images.githubusercontent.com/65383410/165442020-e056bc86-d23c-4e07-8d9d-15b15ac843f6.png)
+
 ## 实现
 
 ```go
