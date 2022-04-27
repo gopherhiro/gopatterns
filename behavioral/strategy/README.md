@@ -2,10 +2,16 @@
 
 策略是一种行为设计模式，它能让你定义一系列算法，并将每种算法分别放入独立的类中，以使算法的对象能够相互替换。
 
-策略模式让你能将各种算法的代码、 内部数据和依赖关系与 其他代码隔离开来。 不同客户端可通过一个简单接口执行算 法， 并能在运行时进行切换。
+策略模式让你能将各种算法的代码、内部数据和依赖关系与其他代码隔离开来。
+
+不同客户端可通过一个简单接口执行算法，并能在运行时进行切换。
 
 Strategy is a behavioral design pattern that lets you define a family of algorithms, put each of them into a separate
 class, and make their objects interchangeable.
+
+
+![image](https://user-images.githubusercontent.com/65383410/165496250-843144a1-5684-4196-87dd-b99f154a3a64.png)
+
 
 ## Real-World Analogy
 
