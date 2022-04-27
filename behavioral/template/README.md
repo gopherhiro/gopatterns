@@ -15,7 +15,18 @@ differ. This is an appropriate situation to consider using the Template Method p
 We define a base template algorithm that consists of a fixed number of methods. That’ll be our template method. We will
 then implement each of the step methods, but leave the template method unchanged.
 
+## Real-World Analogy
+A typical architectural plan can be slightly altered to better fit the client’s needs.
+
+![image](https://user-images.githubusercontent.com/65383410/165469665-91ef19fa-d80c-43e3-b190-bfed4c7f4579.png)
+
+The template method approach can be used in mass housing construction. The architectural plan for building a standard house may contain several extension points that would let a potential owner adjust some details of the resulting house.
+
+Each building step, such as laying the foundation, framing, building walls, installing plumbing and wiring for water and electricity, etc., can be slightly changed to make the resulting house a little bit different from others.
+
 ## 实现
+- abstract steps must be implemented by every subclass
+- optional steps already have some default implementation, but still can be overridden if needed
 
 ```go
 package template
