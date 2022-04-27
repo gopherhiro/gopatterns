@@ -7,6 +7,7 @@ Template Method is a behavioral design pattern that defines the skeleton(框架)
 
 Template method breaks the algorithm into steps, allowing subclasses to override these steps but not the actual method.
 
+So, we have a scenario where the steps of a particular operation are the same, but these steps’ implementation may differ. This is an appropriate situation to consider using the Template Method pattern.
 
 
 ## 实现
