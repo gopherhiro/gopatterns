@@ -5,6 +5,8 @@ Template Method is a behavioral design pattern that defines the skeleton(框架)
 
 ![image](https://user-images.githubusercontent.com/65383410/165442902-28625ab1-c6e0-4639-8233-b3e82288947e.png)
 
+Template method breaks the algorithm into steps, allowing subclasses to override these steps but not the actual method.
+
 
 
 ## 实现
