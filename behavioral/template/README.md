@@ -136,6 +136,17 @@ func TestTemplate(t *testing.T) {
 	email.doOTP()
 }
 
+Output:
+SMS: generating one time password:1231
+SMS: saving one time password: 1231 to cache
+SMS: sending sms: SMS one time password for login is 1231
+SMS: publishing metrics
+
+EMAIL: generating one time password 1231
+EMAIL: saving one time password: 1231 to cache
+EMAIL: sending sms: EMAIL one time password for login is 1231
+EMAIL: publishing metrics
+
 ```
 
 ## 应用场景
