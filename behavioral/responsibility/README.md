@@ -3,7 +3,12 @@
 
 Chain of Responsibility is a behavioral design pattern that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.、
 
+![image](https://user-images.githubusercontent.com/65383410/165558246-2d36cb45-e609-4129-85f5-7964d2532122.png)
 
+
+Handlers are lined up one by one, forming a chain.
+
+![image](https://user-images.githubusercontent.com/65383410/165558363-9af154e4-9ad2-4410-93d7-d5b0cbfaef56.png)
 
 
 ## 实现
