@@ -1,7 +1,9 @@
 # 状态模式
-状态是一种行为设计模式，让你能在一个对象的内部状态变化时改变其行为，使其看上去就像改变了自身所属的类一样。
+状态是一种行为设计模式，当一个对象的内部状态发生变化时，可以改变该对象的行为。
 
-State is a behavioral design pattern that lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.
+即不同的状态对应不同的行为，状态模式可以让状态和行为保持统一。
+
+State is a behavioral design pattern that allows an object to change the behavior when its internal state changes.
 
 ![image](https://user-images.githubusercontent.com/65383410/165517171-0a980878-8ad4-4515-acfb-b014bd839e13.png)
 
