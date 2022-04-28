@@ -15,7 +15,7 @@ time.
 The main idea of the Iterator pattern is to extract the traversal behavior of a collection into a separate object called
 an iterator.
 
-迭代器模式的主要思想是将集合的遍历行为抽取为单独的迭 代器对象。
+迭代器模式的主要思想是将集合的遍历行为抽取为单独的迭代器对象。
 
 ## 实现
 
