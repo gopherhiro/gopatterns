@@ -9,6 +9,17 @@ State is a behavioral design pattern that allows an object to change the behavio
 
 状态模式建议为对象的所有可能状态新建一个类，然后将所有状态的对应行为抽取到这些类中。
 
+状态模式是状态机的一种实现方式。
+
+状态机又叫有限状态机，它有 3 个部分组成：
+- 状态
+- 事件
+- 动作
+
+其中，事件也称为转移条件。
+
+事件触发状态的转移及动作的执行。不过，动作不是必须的，也可能只转移状态，不执行任何动作。
+
 ## Real-World Analogy
 The buttons and switches in your smartphone behave differently depending on the current state of the device:
 - When the phone is unlocked, pressing buttons leads to executing various functions.
