@@ -76,6 +76,7 @@ func (hc *HandlerChain) addHandler(h Handler) {
 	if hc.head == nil {
 		hc.head = h
 		hc.tail = h
+		return
 	}
 	hc.tail.setSuccessor(h)
 	hc.tail = h
