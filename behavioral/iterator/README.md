@@ -29,7 +29,7 @@ type Collection interface {
 }
 
 // UserCollection
-// Concrete collection
+// 具体集合
 type user struct {
 	name string
 	age  int
@@ -48,7 +48,7 @@ func (u *UserCollection) newIterator() Iterator {
 }
 
 // Iterator
-// 迭代接口
+// 迭代器
 type Iterator interface {
 	hasMore() bool
 	next() *user
