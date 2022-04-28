@@ -29,8 +29,18 @@ func (u *UserCollection) newIterator() Iterator {
 // 迭代器
 type Iterator interface {
 	hasMore() bool
+	current() *user
 	next() *user
 }
+
+/*
+迭代器：接口定义方式一
+这个方式使用时比较简单
+type Iterator interface {
+	hasMore() bool
+	next() *user
+}
+*/
 
 // UserIterator
 // 具体迭代器
@@ -46,6 +56,16 @@ func (u *UserIterator) hasMore() bool {
 	return false
 }
 
+func (u *UserIterator) current() *user {
+	if u.index >= len(u.users) {
+		return nil
+	}
+	return u.users[u.index]
+}
+
+// 这里包含了两个操作：
+// 1、返回当前元素
+// 2、后移一位
 func (u *UserIterator) next() *user {
 	if u.hasMore() {
 		elem := u.users[u.index]

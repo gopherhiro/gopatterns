@@ -20,7 +20,8 @@ func TestIterator(t *testing.T) {
 
 	iterator := uc.newIterator()
 	for iterator.hasMore() {
-		u := iterator.next()
+		u := iterator.current()
 		fmt.Printf("user:%+v\n", u)
+		iterator.next()
 	}
 }
