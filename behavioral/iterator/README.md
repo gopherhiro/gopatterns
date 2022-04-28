@@ -23,6 +23,12 @@ an iterator.
 
 迭代器是用来遍历容器的，所以，一个完整的迭代器模式一般会涉及容器和容器迭代器两部分内容。
 
+容器又包含容器接口、容器实现类，迭代器又包含迭代器接口、迭代器实现类。
+
+![image](https://user-images.githubusercontent.com/65383410/165725528-11889e0b-6103-42c4-adc8-21a6392efa56.png)
+
+
+
 ```go
 package iterator
 
