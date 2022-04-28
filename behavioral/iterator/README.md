@@ -1,5 +1,9 @@
 # 迭代器模式
 
+迭代器模式（Iterator Design Pattern），也叫作游标模式（Cursor Design Pattern）。
+
+迭代器模式将集合对象的遍历操作从集合类中拆分出来，放到迭代器类中，让两者的职责更加单一。
+
 迭代器是一种行为设计模式，让你能在不暴露集合底层表现形式(列表、栈和树等)的情况下遍历集合中所有的元素。
 
 Iterator is a behavioral design pattern that lets you traverse elements of a collection without exposing its underlying
@@ -15,9 +19,9 @@ time.
 The main idea of the Iterator pattern is to extract the traversal behavior of a collection into a separate object called
 an iterator.
 
-迭代器模式的主要思想是将集合的遍历行为抽取为单独的迭代器对象。
-
 ## 实现
+
+迭代器是用来遍历容器的，所以，一个完整的迭代器模式一般会涉及容器和容器迭代器两部分内容。
 
 ```go
 package iterator
