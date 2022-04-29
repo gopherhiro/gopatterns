@@ -11,13 +11,64 @@ Provide a unified interface to a set of interfaces in a subsystem. Facade define
 ## 实现
 
 ```go
+package facade
+
+import "fmt"
+
+type T interface {
+	yesterday()
+	today()
+	tomorrow()
+}
+
+type Day struct {
+}
+
+func (d *Day) yesterday() {
+	fmt.Println("I am yesterday")
+}
+
+func (d *Day) today() {
+	fmt.Println("I am today")
+}
+
+func (d *Day) tomorrow() {
+	fmt.Println("I am tomorrow")
+}
+
+// 门面方法：可以进行时光穿梭
+func (d *Day) timeTravel() {
+	d.yesterday()
+	d.today()
+	d.tomorrow()
+}
 
 ```
 
 ## 用法
 
 ```go
+package facade
 
+import (
+	"fmt"
+	"testing"
+)
+
+func TestFacade(t *testing.T) {
+	d := &Day{}
+	d.today()
+
+	fmt.Println("")
+	d.timeTravel()
+}
+
+// Output:
+// I am today
+
+// I am yesterday
+// I am today
+// I am tomorrow
 ```
 
 ## 应用场景
