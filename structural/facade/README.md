@@ -22,6 +22,9 @@ Provide a unified interface to a set of interfaces in a subsystem. Facade define
 
 ## 应用场景
 门面模式应用场景比较明确，主要在接口（粒度）设计方面使用。
+- 解决易用性问题
+- 解决性能问题
+- 解决分布式事务问题
 
 
 
