@@ -9,6 +9,8 @@ otherwise because of incompatible interfaces.
 
 适配器模式是一种结构型设计模式， 它能使接口不兼容的对象能够相互合作，可担任两个对象间的转换器。
 
+一般来说，适配器模式可以看作一种“补偿模式”，用来补救设计上的缺陷。应用这种模式算是“无奈之举”。
+
 ![image](https://user-images.githubusercontent.com/65383410/165320220-417d50a8-dc92-43d4-878b-6eb333deaf1d.png)
 
 #### 举例
@@ -18,6 +20,7 @@ otherwise because of incompatible interfaces.
 你可以创建一个适配器。 这是一个特殊的对象， 能够转换对象接口， 使其能与其他对象进行交互。
 
 ![image](https://user-images.githubusercontent.com/65383410/165323740-b4a6236c-2684-410f-8c51-110f8ad567c1.png)
+
 
 ## 实现
 
@@ -113,6 +116,7 @@ func TestAdapter(t *testing.T) {
 5. 适配不同格式的数据。
 
 ## 优点
+- 
 
 ## 缺点
 
