@@ -1,6 +1,6 @@
 package decorator
 
-// 基本组件和可选层次的通用方法。
+// Pizza 基本组件和可选层次的通用方法。
 type Pizza interface {
 	price() int
 }
