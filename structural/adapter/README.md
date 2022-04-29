@@ -1,5 +1,7 @@
 # 适配器模式
-Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
+
+Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't
+otherwise because of incompatible interfaces.
 
 适配器模式的英文翻译是 Adapter Design Pattern。
 
@@ -84,6 +86,7 @@ import (
 func TestAdapter(t *testing.T) {
 	var target iTarget
 
+	// 通过适配器 Adapter，A 转化成实现 iTarget 接口定义的类型
 	a := &A{}
 	target = &Adaptor{a: a}
 	target.f1()
