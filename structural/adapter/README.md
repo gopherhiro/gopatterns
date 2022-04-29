@@ -1,7 +1,7 @@
 # 适配器模式
-适配器模式是一种结构型设计模式， 它能使接口不兼容的对象能够相互合作。
+Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
 
-适配器可担任两个对象间的封装器， 它会接收对于一个对象的调用， 并将其转换为另一个对象可识别的格式和接口。
+适配器模式是一种结构型设计模式， 它能使接口不兼容的对象能够相互合作，可担任两个对象间的转换器。
 
 ![image](https://user-images.githubusercontent.com/65383410/165320220-417d50a8-dc92-43d4-878b-6eb333deaf1d.png)
 
