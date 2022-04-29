@@ -1,6 +1,10 @@
 # 适配器模式
 Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.
 
+适配器模式的英文翻译是 Adapter Design Pattern。
+
+顾名思义，这个模式就是用来做适配的，它将不兼容的接口转换为可兼容的接口。
+
 适配器模式是一种结构型设计模式， 它能使接口不兼容的对象能够相互合作，可担任两个对象间的转换器。
 
 ![image](https://user-images.githubusercontent.com/65383410/165320220-417d50a8-dc92-43d4-878b-6eb333deaf1d.png)
