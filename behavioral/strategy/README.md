@@ -2,7 +2,7 @@
 
 策略模式，英文全称是 Strategy Design Pattern。
 
-Define a family of algorithms, encapsulate each one, and make them interchange- able. Strategy lets the algorithm vary independently from clients that use it.
+Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
 
 策略是一种行为设计模式，它能让你定义一系列算法，并将每种算法分别放入独立的类中，以使算法的对象能够相互替换。
 
