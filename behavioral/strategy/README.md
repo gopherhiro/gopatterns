@@ -1,8 +1,10 @@
 # 策略模式
 
-策略是一种行为设计模式，它能让你定义一系列算法，并将每种算法分别放入独立的类中，以使算法的对象能够相互替换。
+策略模式，英文全称是 Strategy Design Pattern。
 
-策略模式让你能将各种算法的代码、内部数据和依赖关系与其他代码隔离开来。
+Define a family of algorithms, encapsulate each one, and make them interchange- able. Strategy lets the algorithm vary independently from clients that use it.
+
+策略是一种行为设计模式，它能让你定义一系列算法，并将每种算法分别放入独立的类中，以使算法的对象能够相互替换。
 
 不同客户端可通过一个简单接口执行算法，并能在运行时进行切换。
 
