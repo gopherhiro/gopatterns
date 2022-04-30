@@ -138,7 +138,7 @@ func TestStrategy(t *testing.T) {
 ```
 
 ## 应用场景
-
+- 最常见的应用场景是，利用它来避免冗长的 if-else 或 switch 分支判断。
 - When an object needs to support different behavior and you want to change the behavior at run time.
 - When you want to avoid a lot of conditionals of choosing the runtime behavior.
 - When you have different algorithms that are similar and they only differ in the way they execute some behavior.
