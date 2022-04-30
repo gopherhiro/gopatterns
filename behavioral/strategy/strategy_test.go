@@ -5,8 +5,8 @@ import (
 )
 
 func TestStrategy(t *testing.T) {
-	strategy := NewStrategy(3)
-	cache := initCache(strategy)
+	initStrategy := NewStrategy(3)
+	cache := initCache(initStrategy)
 
 	cache.add("a", "1")
 	cache.add("b", "2")
@@ -21,4 +21,10 @@ func TestStrategy(t *testing.T) {
 	cache.setEvictAlgo(fifo)
 
 	cache.add("e", "5")
+
+	runStrategy := NewStrategy(2)
+	cache.setEvictAlgo(runStrategy)
+
+	cache.add("e", "6")
+
 }
