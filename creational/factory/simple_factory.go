@@ -12,7 +12,7 @@ func newEnglish() *English {
 	return &English{}
 }
 
-// 简单工厂（Simple Factory）- 函数式使用方式
+// NewCourse 简单工厂（Simple Factory）- 函数式使用方式
 func NewCourse(ID int64) Course {
 	if ID == static.Chinese {
 		return newChinese()

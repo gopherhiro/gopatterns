@@ -1,6 +1,9 @@
 package strategy
 
-import "fmt"
+import (
+	"fmt"
+	"gopatterns/pkg/static"
+)
 
 // 以缓存淘汰算法举例，来研究策略模式
 
@@ -73,4 +76,33 @@ func (c *Cache) evict() {
 	// 上下文仅可通过策略接口同策略对象进行交互
 	c.evictAlgo.evict(c)
 	c.length--
+}
+
+// 策略的创建:封装创建逻辑，对客户端屏蔽创建细节。
+// 可根据配置、用户输入、计算结果动态决定使用的策略。
+
+// NewStrategy strategyFactory
+func NewStrategy(strategy int) EvictAlgo {
+	if instance, ok := strategyMap[strategy]; ok {
+		return instance
+	}
+	return nil
+}
+
+var strategyMap = map[int]EvictAlgo{
+	static.StrategyFIFO: newFIFO(),
+	static.StrategyLRU:  newLRU(),
+	static.StrategyLFU:  newLFU(),
+}
+
+func newFIFO() *FIFO {
+	return &FIFO{}
+}
+
+func newLRU() *LRU {
+	return &LRU{}
+}
+
+func newLFU() *LFU {
+	return &LFU{}
 }

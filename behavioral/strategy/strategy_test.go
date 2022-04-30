@@ -5,8 +5,8 @@ import (
 )
 
 func TestStrategy(t *testing.T) {
-	lfu := &LFU{}
-	cache := initCache(lfu)
+	strategy := NewStrategy(3)
+	cache := initCache(strategy)
 
 	cache.add("a", "1")
 	cache.add("b", "2")
