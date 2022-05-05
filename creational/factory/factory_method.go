@@ -10,7 +10,7 @@ func newEnglishFactory() CourseFactory {
 	return &EnglishFactory{}
 }
 
-// 为工厂类再创建一个简单工厂，也就是工厂的工厂，用来创建工厂类对象。
+// NewFactory 为工厂类再创建一个简单工厂，也就是工厂的工厂，用来创建工厂类对象。
 func NewFactory(ID int) CourseFactory {
 	if ID == static.Chinese {
 		return newChineseFactory()

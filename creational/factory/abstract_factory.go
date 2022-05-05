@@ -144,7 +144,6 @@ type adidasShirt struct {
 	shirt
 }
 
-// 输出操作
 func PrintShoeDetails(s iShoe) {
 	fmt.Printf("Logo: %s", s.getLogo())
 	fmt.Println()

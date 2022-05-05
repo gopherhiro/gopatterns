@@ -7,7 +7,6 @@ type Course interface {
 	GetName() string
 }
 
-// Chinese
 type Chinese struct {
 }
 
@@ -19,7 +18,6 @@ func (m *Chinese) GetName() string {
 	return "Chinese"
 }
 
-// English
 type English struct {
 }
 
@@ -31,12 +29,11 @@ func (m *English) GetName() string {
 	return "English"
 }
 
-// Factory Method Pattern
+// CourseFactory Factory Method Pattern
 type CourseFactory interface {
 	NewCourse() Course
 }
 
-// ChineseFactory
 type ChineseFactory struct {
 }
 
@@ -45,7 +42,6 @@ func (m *ChineseFactory) NewCourse() Course {
 	return newChinese()
 }
 
-// EnglishFactory
 type EnglishFactory struct {
 }
 
