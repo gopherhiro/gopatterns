@@ -37,6 +37,9 @@ func NewDirector(b iBuilder) *director {
 	}
 }
 
+// BuildHouse
+// director BuildHouse 封装了具体的步骤和流程
+// 如果没有 director，客户端可以根据自己的需要，决定创建对象的步骤和流程
 func (d *director) BuildHouse() house {
 	d.builder.setDoorType()
 	d.builder.setWindowType()
