@@ -5,6 +5,8 @@
 
 ![image](https://user-images.githubusercontent.com/65383410/165267686-569d80d5-4b89-49ab-8f2b-5a84e7c7f2f9.png)
 
+## 原理
+在实际开发中经常被用到的一种设计模式。
 
 ## 实现
 
