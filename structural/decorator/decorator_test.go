@@ -20,7 +20,7 @@ func TestDecorator(t *testing.T) {
 	fmt.Println("price of vegetable Pizza with tomato and cheese:", withCheese.price())
 }
 
-func TestExampleDecorator(t *testing.T) {
+func TestExample1Decorator(t *testing.T) {
 	var c Component = &ConcreteComponent{}
 	c = WarpAddDecorator(c, 10)
 	c = WarpMulDecorator(c, 8)
@@ -29,4 +29,25 @@ func TestExampleDecorator(t *testing.T) {
 	fmt.Printf("res %d\n", res)
 	// Output:
 	// res 80
+}
+
+func TestExample2Decorator(t *testing.T) {
+	var ia IA
+
+	// proxy pattern
+	ia = &AProxy{}
+	ia.doSth()
+
+	// decorator pattern
+	ia = &ADecorator{}
+	ia.doSth()
+
+	// Output:
+	// I am proxy before
+	// I am A
+	// I am proxy after
+
+	// I am decorator before
+	// I am A
+	// I am decorator after
 }
