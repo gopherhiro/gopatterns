@@ -1,5 +1,8 @@
 package decorator
 
+// 可以给一个对象，添加多个装饰
+// 使对象更加丰富
+
 // Pizza 基本组件和可选层次的通用方法。
 type Pizza interface {
 	price() int
@@ -32,4 +35,3 @@ type withCheese struct {
 func (c *withCheese) price() int {
 	return c.pizza.price() + 10
 }
-
