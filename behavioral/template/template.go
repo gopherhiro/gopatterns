@@ -17,6 +17,7 @@ type OTP interface {
 	publishMetric()
 }
 
+// 模板类型与模板方法
 type template struct {
 	otp OTP
 }
@@ -36,7 +37,6 @@ func (t *template) doOTP() error {
 
 // SMS Concrete implementation
 type sms struct {
-	template
 }
 
 func (s *sms) random() string {
@@ -64,7 +64,6 @@ func (s *sms) publishMetric() {
 
 // EMAIL Concrete implementation
 type email struct {
-	template
 }
 
 func (e *email) random() string {

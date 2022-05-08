@@ -1,4 +1,9 @@
-# 模板方法模式
+# 模板方法模式（Template Method Design Pattern）
+
+Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template Method lets subclasses
+redefine certain steps of an algorithm without changing the algorithm's structure.
+
+模板方法模式在一个方法中定义一个算法骨架，并将某些步骤推迟到子类中实现。模板方法模式可以让子类在不改变算法整体结构的情况下，重新定义算法中的某些步骤。
 
 模板方法是一种行为设计模式，它在超类中定义了一个算法的框架，允许子类在不修改结构的情况下重写算法的特定步骤。
 
@@ -18,15 +23,34 @@ We define a base template algorithm that consists of a fixed number of methods. 
 then implement each of the step methods, but leave the template method unchanged.
 
 ## Real-World Analogy
+
 A typical architectural plan can be slightly altered to better fit the client’s needs.
 
 ![image](https://user-images.githubusercontent.com/65383410/165469665-91ef19fa-d80c-43e3-b190-bfed4c7f4579.png)
 
-The template method approach can be used in mass housing construction. The architectural plan for building a standard house may contain several extension points that would let a potential owner adjust some details of the resulting house.
+The template method approach can be used in mass housing construction. The architectural plan for building a standard
+house may contain several extension points that would let a potential owner adjust some details of the resulting house.
 
-Each building step, such as laying the foundation, framing, building walls, installing plumbing and wiring for water and electricity, etc., can be slightly changed to make the resulting house a little bit different from others.
+Each building step, such as laying the foundation, framing, building walls, installing plumbing and wiring for water and
+electricity, etc., can be slightly changed to make the resulting house a little bit different from others.
+
+## 作用
+
+模板模式有两大作用：复用和扩展。
+
+##### 复用
+
+模板模式把一个算法中：
+
+- 「可变的部分」抽象成接口，让其他类型实现；
+- 「不变的流程」抽象成模板，供其他类型**复用**。
+
+##### 拓展
+
+扩展指的是，框架通过模板模式提供功能扩展点，让框架用户可以在不修改框架源码的情况下，基于扩展点定制化框架的功能。
 
 ## 实现
+
 - abstract steps must be implemented by every subclass
 - optional steps already have some default implementation, but still can be overridden if needed
 
@@ -50,6 +74,7 @@ type OTP interface {
 	publishMetric()
 }
 
+// 模版类型与模版方法
 type template struct {
 	otp OTP
 }
@@ -69,7 +94,6 @@ func (t *template) doOTP() error {
 
 // SMS Concrete implementation
 type sms struct {
-	template
 }
 
 func (s *sms) random() string {
@@ -97,7 +121,6 @@ func (s *sms) publishMetric() {
 
 // EMAIL Concrete implementation
 type email struct {
-	template
 }
 
 func (e *email) random() string {
