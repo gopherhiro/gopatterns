@@ -15,6 +15,6 @@ func TestObserver(t *testing.T) {
 
 	item.haveNewEvent()
 
-	item.deregister(observer1)
+	item.unregister(observer1)
 	item.haveNewEvent()
 }

@@ -2,19 +2,14 @@ package observer
 
 import "fmt"
 
-// 主体
+// Subject 主体
 type Subject interface {
 	register(o Observer)
-	deregister(o Observer)
+	unregister(o Observer)
 	notifyObservers()
 }
 
-// 观察者
-type Observer interface {
-	update(msg string)
-}
-
-// 具体主体
+// Item 具体主体
 type Item struct {
 	observers []Observer
 	name      string
@@ -37,7 +32,7 @@ func (i *Item) register(o Observer) {
 	i.observers = append(i.observers, o)
 }
 
-func (i *Item) deregister(o Observer) {
+func (i *Item) unregister(o Observer) {
 	i.observers = removeObserver(i.observers, o)
 }
 
@@ -59,22 +54,27 @@ func removeObserver(obs []Observer, o Observer) []Observer {
 	return obs
 }
 
-// 具体观察者:Customer
+// Observer 观察者
+type Observer interface {
+	update(msg string)
+}
+
+// Customer 具体观察者
 type Customer struct {
 }
 
 func (c *Customer) update(msg string) {
-	// TODO:收到通知，执行自己的业务逻辑
+	fmt.Println("msg:", msg)
 	fmt.Println("Customer is notified")
-	fmt.Println("Customer already know has new item:", msg)
+	// TODO:收到通知，执行自己的业务逻辑
 }
 
-// 具体观察者:Trader
+// Trader 具体观察者
 type Trader struct {
 }
 
 func (t *Trader) update(msg string) {
-	// TODO:收到通知，执行自己的业务逻辑
+	fmt.Println("msg:", msg)
 	fmt.Println("Trader is notified")
-	fmt.Println("Trader already know has new item:", msg)
+	// TODO:收到通知，执行自己的业务逻辑
 }
