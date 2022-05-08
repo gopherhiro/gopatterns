@@ -22,12 +22,44 @@ transportation strategies. You can pick one of the strategies depending on facto
 
 ## 作用
 
-策略模式解耦策略的定义、创建、使用三个部分。 策略模式主要的作用还是解耦策略的定义、创建和使用，控制代码的复杂度，让每个部分都不至于过于复杂、代码量过多。
+策略模式解耦策略的定义、创建、使用三个部分。
+
+策略模式主要的作用是解耦策略的定义、创建和使用，控制代码的复杂度，让每个部分都不至于过于复杂、代码量过多。
+
 除此之外，策略模式还能让其满足开闭原则，添加新策略的时候，最小化、集中化代码改动，减少引入 bug 的风险。
 
 ##### 策略的定义
 
 策略类的定义比较简单，包含一个策略接口和一组实现这个接口的策略类。因为所有的策略类都实现相同的接口，所以，客户端代码基于接口编程，可以灵活地替换不同的策略。
+
+```go
+package strategy
+
+import (
+	"fmt"
+)
+
+type Strategy interface {
+	algorithmInterface()
+}
+
+type ConcreteStrategyA struct {
+}
+
+func (a *ConcreteStrategyA) algorithmInterface() {
+	//TODO 具体的算法...
+	fmt.Println("Do StrategyA")
+}
+
+type ConcreteStrategyB struct {
+}
+
+func (b *ConcreteStrategyB) algorithmInterface() {
+	//TODO 具体的算法...
+	fmt.Println("Do StrategyB")
+}
+
+```
 
 ##### 策略的创建
 
