@@ -1,4 +1,6 @@
-# go design patterns
+# 设计模式学习之旅
+
+## go design patterns
 
 1.[理论学习](https://refactoring.guru/design-patterns)
 
